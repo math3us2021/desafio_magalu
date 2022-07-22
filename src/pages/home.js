@@ -5,7 +5,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 import Button from '@mui/material/Button';
 import { Title, RedesSociais, Google, Email } from "./styles";
 import TipoConta from "../components/TipoConta";
-import DadosPessoais from "../components/DadosPessoais";
+import DadosPessoais from "../components/PessoaFisica";
 import Endereco from "../components/Endereco";
 import Notificacoes from "../components/Notificacoes";
 import MagaluPlay from "../components/MagaluPlay";
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
             </Email>
             <TipoConta/>
-            <DadosPessoais/>
+           
             <Endereco/>
             <Notificacoes/>
             <MagaluPlay/>

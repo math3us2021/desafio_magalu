@@ -1,29 +1,60 @@
-import React from "react";
-import {TipoConta} from "./styles";
+import React, { useState } from "react";
+import PessoaFisica from "./PessoaFisica";
+import PessoaJuridica from "./PessoaJuridica";
+import { TipoConta } from "./styles";
 
 export default () => {
+    const [checked, setChecked] = useState("PF");
+
+
+    function PessoaFis() {
+
+        return (
+            <PessoaFisica />
+        )
+    }
+
+
+
+
+    function PessoaJurid() {
+        return (
+            <PessoaJuridica />
+
+        )
+
+    }
+
+
+
+    console.log(checked)
+
 
     return (
-        <TipoConta>
-            <div>
-                <span>Tipo de Conta</span>
-            </div>
+        <div>
+            <TipoConta>
+                <div>
+                    <span>Tipo de Conta</span>
+                </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked></input>
-                <label class="form-check-label" for="exampleRadios1">
-                    Pessoa Física
-                </label>
-            </div>
+                <div class="form-check">
+                    <input  type="radio" name="exampleRadios" id="exampleRadios1"
+                        value={checked} onClick={(e) => setChecked("PF")} checked></input>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Pessoa Física
+                    </label>
+                </div>
 
 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked></input>
-                <label class="form-check-label" for="exampleRadios1">
-                    Pessoa Juridica
-                </label>
-            </div>
-
-        </TipoConta>
+                <div class="form-check">
+                    <input  type="radio" name="exampleRadios" id="exampleRadios2"
+                        value={checked} onClick={(e) => setChecked("PJ")} ></input>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Pessoa Juridica
+                    </label>
+                </div>
+            </TipoConta>
+            {checked === "PF" ? PessoaFis() : PessoaJurid()}
+        </div>
     )
 }

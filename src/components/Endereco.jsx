@@ -1,7 +1,9 @@
 import React from "react";
 import { Cep, Endereco } from "./styles";
 
+
 export default () => {
+    // const [cep, setCep] = useState("");
 
     return(
         <div>
