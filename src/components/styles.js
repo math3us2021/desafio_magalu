@@ -44,9 +44,68 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 
+div{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 input{
     width: 250px;
 }
+`;
+
+export const Nome = styled.div`
+
+label{
+    text-align: center;
+    justify-content: center;
+    
+}
+
+input{
+    width: 350px;
+    margin: 10px;
+}
+`;
+export const DataNasc = styled.div`
+margin-right: 20%;
+margin-top: 10px;
+
+input{
+    width: 150px;
+    margin-left: 10px;
+   
+}
+`;
+export const Senha = styled.div`
+margin-right: 20%;
+margin-top: 20px;
+input{
+    width: 250px;
+    margin-left: 10px;
+}
+`;
+
+export const Cep = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const Endereco = styled.form`
+display: flex;
+flex-direction: column;
+align-items: center;
+
+input{
+    width: 250px;
+    margin-left: 10px;
+}
+
 
 `;

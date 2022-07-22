@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import { Title, RedesSociais, Google, Email } from "./styles";
 import TipoConta from "../components/TipoConta";
 import DadosPessoais from "../components/DadosPessoais";
+import Endereco from "../components/Endereco";
+import Notificacoes from "../components/Notificacoes";
 
 
 export default function Home() {
@@ -35,5 +37,7 @@ export default function Home() {
             </Email>
             <TipoConta/>
             <DadosPessoais/>
+            <Endereco/>
+            <Notificacoes/>
         </div>)
 }
