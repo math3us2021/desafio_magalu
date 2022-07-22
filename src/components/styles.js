@@ -16,14 +16,22 @@ li{
 }
 
 
+
 `;
 export const Linha = styled.div`
 heigth: 50px
 width: 100%;
-background: #CE5937;
-background: -moz-linear-gradient(left, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
-background: -webkit-linear-gradient(left, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
-background: linear-gradient(to right, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
+
+
+div{
+    width: 100%;
+    height: 7px;
+    border: 1px solid background: #D9E52F;
+    background: -moz-linear-gradient(left, #D9E52F 0%, #EA5D1D 50%, #2466EA 100%);
+    background: -webkit-linear-gradient(left, #D9E52F 0%, #EA5D1D 50%, #2466EA 100%);
+    background: linear-gradient(to right, #D9E52F 0%, #EA5D1D 50%, #2466EA 100%);
+}
+
 `;
 
 export const TipoConta = styled.div`
@@ -49,19 +57,27 @@ div{
     flex-direction: row;
 }
 
-label{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+// label{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+// }
 
+
+`;
+
+export const Cpf = styled.div`
+margin-right: 115px;
 input{
+    margin-left: 3px;
     width: 250px;
+
 }
 `;
 
-export const Nome = styled.div`
 
+export const Nome = styled.div`
+margin-right: 5.5%;
 label{
     text-align: center;
     justify-content: center;
@@ -109,11 +125,28 @@ input{
 }
 `;
 
+export const Title = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;`;
+
+
 export const Notification = styled.div`
 margin: 0px 0px 25px 600px;
 
+`;
+
+export const NotificationBody = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+`;
+
+export const MagaluPlay = styled.div`
+margin: 0px 0px 25px 600px;
+border-top: 3px solid  #bfbfbf;
+border-bottom: 3px solid #bfbfbf;
+
 div{
     margin-top: 20px;
+    margin-bottom: 20px;
 }
-
 `;

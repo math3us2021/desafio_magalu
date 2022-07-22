@@ -8,6 +8,7 @@ import TipoConta from "../components/TipoConta";
 import DadosPessoais from "../components/DadosPessoais";
 import Endereco from "../components/Endereco";
 import Notificacoes from "../components/Notificacoes";
+import MagaluPlay from "../components/MagaluPlay";
 
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
                 <div>
                     <label>Email</label>
                     <div>
-                        <input></input>
+                        <input className="form-control"></input>
                     </div>
                 </div>
             </Email>
@@ -39,5 +40,7 @@ export default function Home() {
             <DadosPessoais/>
             <Endereco/>
             <Notificacoes/>
+            <MagaluPlay/>
+            
         </div>)
 }

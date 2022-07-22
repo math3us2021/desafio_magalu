@@ -19,12 +19,15 @@ export const RedesSociais = styled.div`
 
 export const Google = styled(Button)`
     background-color: #eaeae1 !important;
-    color: #ff1a1a !important;
+
+
+    color: #333 !important;
 `;
 
 export const Email = styled.div`
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    margin-left: 535px;
     
     div{
         display: flex;

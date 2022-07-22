@@ -11,7 +11,7 @@ export default () => {
                 </div>
                 <Cep>
                     <label>CEP</label>
-                    <input type="text" placeholder="Digite seu CEP"></input>
+                    <input type="text" className="form-control" placeholder="Digite seu CEP"></input>
                     <button>OK</button>
                 </Cep>
             </Endereco>

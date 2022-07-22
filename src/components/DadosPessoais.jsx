@@ -1,5 +1,5 @@
 import React from "react";
-import { Dados, Nome, DataNasc, Senha } from "./styles";
+import { Dados, Nome, DataNasc, Senha, Cpf } from "./styles";
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Input from '@mui/material/Input';
 
@@ -8,21 +8,21 @@ export default () => {
     return (
         <Dados>
             <label><strong><h5>Dados pessoais</h5></strong></label>
-            <div class="form-group row">
-                <label  class="col-sm-2 col-form-label">CPF</label>
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email"></input>
-            </div>
-            <Nome class="form-group row">
-                <label for="inputEmail3" >Nome completo</label>
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Senha"></input>
+            <Cpf className="form-group row">
+                <label  className="col-sm-2 col-form-label">CPF</label>
+                <input type="email" className="form-control" id="inputEmail3" placeholder="Email"></input>
+            </Cpf>
+            <Nome className="form-group row">
+                <label>Nome completo</label>
+                <input type="password" className="form-control" id="inputPassword3" placeholder="Senha"></input>
             </Nome>
             <DataNasc>
                 <label >Data de Nascimento</label>
-                <input class="form-control" placeholder="DD/MM/AAAA"></input>
+                <input className="form-control" placeholder="DD/MM/AAAA"></input>
             </DataNasc>
             <Senha>
-                <label class="FormGroup-label " >Senha (Minimo de seis digitos)</label>
-                <input class="form-control" placeholder="Senha" ></input>
+                <label className="FormGroup-label " >Senha (Minimo de seis digitos)</label>
+                <input className="form-control" placeholder="Senha" ></input>
             </Senha>
         </Dados >
     )

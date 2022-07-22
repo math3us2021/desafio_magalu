@@ -16,11 +16,12 @@ export default () => {
                 <li>Informatica</li>
                 <li>Saldão</li>
             </ul>
-
+          
+          <Linha>
+            <div></div>
+          </Linha>
           </Nav>
-            <Linha>
-                 
-            </Linha>
+          
         </div>
     )
 }
