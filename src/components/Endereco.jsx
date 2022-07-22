@@ -7,7 +7,7 @@ export default () => {
         <div>
             <Endereco>
                 <div>
-                    <label><strong>Endereço de cobrança</strong></label>
+                    <label><strong><h5>Endereço de cobrança</h5></strong></label>
                 </div>
                 <Cep>
                     <label>CEP</label>

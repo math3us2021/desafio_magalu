@@ -74,7 +74,7 @@ input{
 }
 `;
 export const DataNasc = styled.div`
-margin-right: 20%;
+margin-right: 21.5%;
 margin-top: 10px;
 
 input{
@@ -98,14 +98,22 @@ export const Cep = styled.div`
 `;
 
 export const Endereco = styled.form`
-display: flex;
-flex-direction: column;
-align-items: center;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+margin: 0px 0px 25px 600px;
 
 input{
     width: 250px;
     margin-left: 10px;
 }
+`;
 
+export const Notification = styled.div`
+margin: 0px 0px 25px 600px;
+
+div{
+    margin-top: 20px;
+}
 
 `;

@@ -7,7 +7,7 @@ export default () => {
 
     return (
         <Dados>
-            <span>Dados Pessoais</span>
+            <label><strong><h5>Dados pessoais</h5></strong></label>
             <div class="form-group row">
                 <label  class="col-sm-2 col-form-label">CPF</label>
                 <input type="email" class="form-control" id="inputEmail3" placeholder="Email"></input>
