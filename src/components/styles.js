@@ -150,3 +150,7 @@ div{
     margin-bottom: 20px;
 }
 `;
+export const FooterForm = styled.div`
+margin: 0px 0px 25px 600px;
+
+`;

@@ -9,6 +9,8 @@ import DadosPessoais from "../components/DadosPessoais";
 import Endereco from "../components/Endereco";
 import Notificacoes from "../components/Notificacoes";
 import MagaluPlay from "../components/MagaluPlay";
+import FooterFormul  from "../components/FooterFormul";
+import Footer from "../components/Footer";
 
 
 export default function Home() {
@@ -41,6 +43,7 @@ export default function Home() {
             <Endereco/>
             <Notificacoes/>
             <MagaluPlay/>
-            
+            <FooterFormul/>
+            <Footer/>
         </div>)
 }
