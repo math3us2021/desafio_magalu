@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 
@@ -13,11 +13,17 @@ import * as Yup from "yup";
 
 
 export default function Validation() {
+
+    function onSubmit(values,actions) {
+        console.log(values);
+    }
     
     return (
         <div>
             <h1>Validation</h1>
             <Formik 
+            
+            onSubmit={onSubmit}
             validationSchema={schema}
             initialValues={{  // iniciando os valores, estão zerados
                 firstName: "", 
@@ -26,29 +32,30 @@ export default function Validation() {
                 trabalho: "",
             }}
             >
-                {({errors})=> (
+                {({errors, touched, isValid })=> (
                     <Form>
                         <div>
                             <label id="FirstName">Primeiro Nome</label>
                             <Field id="FirstName" name="firstName" type="text" />
-                            {errors.firstName && <span className="errorInput">{errors.firstName}</span>} 
+                            <ErrorMessage name="FirstName" />
+                            {/* {errors.firstName && touched.firstName && <span className="errorInput">{errors.firstName}</span>}  */}
                         </div>
                         <div>
                          <label id="age">Idade</label>
                             <Field id="age" name="age" type="number" />
-                            {errors.age && <span className="errorInput">{errors.age}</span>}
+                            {errors.age && touched.age && <span className="errorInput">{errors.age}</span>}
                         </div>
                         <div>
                             <label >Escolaridade</label>
                             <Field  name="escolaridade" type="text" />
-                            {errors.escolaridade && <span className="errorInput">{errors.firstName}</span>} 
+                            {errors.escolaridade && touched.escolaridade && <span className="errorInput">{errors.firstName}</span>} 
                         </div>
                         <div>
                          <label id="trabalho">Ultimo trabalho</label>
                             <Field id="trabalho" name="trabalho" type="number" />
-                            {errors.trabalho && <span className="errorInput">{errors.trabalho}</span>}
+                            {errors.trabalho && touched.trabalho && <span className="errorInput">{errors.trabalho}</span>}
                         </div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" disabled={!isValid} >Enviar</button>
                     </Form>
                 )}
             </Formik>
