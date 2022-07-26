@@ -41,3 +41,10 @@ export const Email = styled.div`
     }
 
 `;
+
+
+export const InputError = styled.input`
+.errorInput{
+    border: 1px solid red !important;
+}
+`;

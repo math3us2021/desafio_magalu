@@ -8,21 +8,16 @@ export default () => {
 
 
     function PessoaFis() {
-
         return (
             <PessoaFisica />
         )
     }
 
 
-
-
     function PessoaJurid() {
         return (
             <PessoaJuridica />
-
         )
-
     }
 
 
@@ -38,7 +33,7 @@ export default () => {
                 </div>
 
                 <div class="form-check">
-                    <input  type="radio" name="exampleRadios" id="exampleRadios1"
+                    <input  type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                         value={checked} onClick={(e) => setChecked("PF")} checked></input>
                     <label class="form-check-label" for="exampleRadios1">
                         Pessoa Física
@@ -47,7 +42,7 @@ export default () => {
 
 
                 <div class="form-check">
-                    <input  type="radio" name="exampleRadios" id="exampleRadios2"
+                    <input  type="radio" name="flexRadioDefault" id="flexRadioDefault2" 
                         value={checked} onClick={(e) => setChecked("PJ")} ></input>
                     <label class="form-check-label" for="exampleRadios1">
                         Pessoa Juridica
