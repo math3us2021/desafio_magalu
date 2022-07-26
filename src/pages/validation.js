@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import EnderecoNovo from "../components/EnderecoNovo";
 
 
 
@@ -59,6 +60,8 @@ export default function Validation() {
                     </Form>
                 )}
             </Formik>
+
+            <EnderecoNovo/>
 
         </div>
     );

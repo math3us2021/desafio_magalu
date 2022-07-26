@@ -1,17 +1,17 @@
 import React from "react";
-import{Nav,Linha} from "./styles";
+import{Footer,Linha} from "./styles";
 
 export default () => {
 
     return(
         <div>
-          <Nav>
+          <Footer>
           <Linha>
             <div></div>
           </Linha>
             <ul> </ul>
           
-          </Nav>
+          </Footer>
           
         </div>
     )

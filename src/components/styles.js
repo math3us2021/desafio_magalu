@@ -4,6 +4,10 @@ export const Nav = styled.div`
 background-color: #0086ff;
 color: white;
 
+
+
+
+
 ul{
     display: flex;
     justify-content: space-around;
@@ -17,6 +21,27 @@ li{
 
 
 
+`;
+export const Footer = styled.div`
+background-color: #0086ff;
+color: white;
+
+border-top: 1px solid #333;
+bottom: 0;
+left: 0;
+height: 40px;
+width: 100%;
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;   
+}
+
+li{
+    list-style-type: none;
+}
 `;
 export const Linha = styled.div`
 heigth: 50px
@@ -154,3 +179,4 @@ export const FooterForm = styled.div`
 margin: 0px 0px 25px 600px;
 
 `;
+
