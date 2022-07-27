@@ -4,3 +4,15 @@
 .errorInp {
   color: brown !important;
 } 
+
+/* .formEmail{
+  display: flex;
+flex-direction: column;
+background-color: rgba(241, 241, 241, 0.885);
+} */
+
+.formInput{
+  display: inline;
+  flex-direction: row;
+  
+}

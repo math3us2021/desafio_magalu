@@ -57,17 +57,16 @@ export const Conta = styled.div`
     
     justify-content: center;
 
-    div{
-        display: flex;
-        flex-direction: column;
-        margin : 10px;
-    }
+    // div{
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin : 10px;
+    // }
 
 `;
 
-export const FormEmail = styled.form`
-display: flex;
-flex-direction: column;
+export const FormEmail = styled.div`
+
 
 label{
    margin : 5px;
@@ -78,13 +77,10 @@ input{
     width: 300px;
 }
 button{
-    background-color: #59c22f !important;
+    background-color: #59c22f!important;
     width: 300px;
     margin-left: 50px;
 }
 
-    div{
-        display: flex;
-        flex-direction: row;
-    }
+
 `;

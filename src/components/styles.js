@@ -77,6 +77,7 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 
+
 div{
     display: flex;
     flex-direction: row;
@@ -120,9 +121,14 @@ margin-top: 10px;
 
 input{
     width: 150px;
-    margin-left: 10px;
-   
+    margin-left: 10px;   
 }
+
+label{
+    align-items: center;
+    margin: 5px;
+}
+
 `;
 export const Senha = styled.div`
 margin-right: 20%;
