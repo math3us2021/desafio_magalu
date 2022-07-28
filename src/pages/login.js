@@ -7,12 +7,13 @@ import * as Yup from "yup";
 
 import { Title, Conta, FormEmail } from "./styles";
 
+
 const schema = Yup.object().shape({
     email: Yup.string().email("Email inválido").required("Email é obrigatório"),
 });
 
 
-export default function Login() {
+export default function Login(props) {
 
     // function validate(e) {
     //     e.preventDefault();
@@ -87,7 +88,10 @@ export default function Login() {
     // }
 
 
+    function onSubmit(values, props) {
+        console.log(values);
 
+    }
 
     return (
         <div>
@@ -103,6 +107,7 @@ export default function Login() {
                         <label><strong><h4>Quero criar uma conta</h4></strong></label>
                         <div>
                             <Formik
+                                onSubmit={onSubmit}
                                 validationSchema={schema}
                                 initialValues={{
                                     email: "",
@@ -118,14 +123,14 @@ export default function Login() {
                                                 </FormEmail>
                                            
 
-                                            <FormEmail className="form-control-group">
+                                            
 
-                                                <Button href="/" color="success"
+                                                <button style={{width: "300px", marginLeft: "60px" }} color="success"
                                                     disabled={!isValid || !dirty}
                                                     variant="contained"
-                                                    size="large" id="button">Entrar</Button>
+                                                    size="large" id="button">Entrar</button>
 
-                                            </FormEmail>
+                                           
                                         
                                     </Form>
                                 )}

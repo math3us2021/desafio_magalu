@@ -57,11 +57,14 @@ export const Conta = styled.div`
     
     justify-content: center;
 
-    // div{
-    //     display: flex;
-    //     flex-direction: column;
-    //     margin : 10px;
-    // }
+    div{
+  
+        margin : 10px;
+        text-align: center;
+    }
+label{
+ 
+}
 
 `;
 
@@ -77,7 +80,7 @@ input{
     width: 300px;
 }
 button{
-    background-color: #59c22f!important;
+    background-color: ##2e7d32!important;
     width: 300px;
     margin-left: 50px;
 }

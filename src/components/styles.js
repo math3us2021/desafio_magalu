@@ -61,7 +61,9 @@ div{
 
 export const TipoConta = styled.div`
 display: flex;
+flex-direction: row;
 justify-content: center;
+align-items: center;
 
     div{
      

@@ -33,10 +33,11 @@ export default () => {
         <div>
             <TipoConta>
                 <div>
-                    <span>Tipo de Conta</span>
+                    <div><strong>Tipo de Conta</strong></div>
                 </div>
 
                 <div>
+                    Pessoa física
                     <Radio
                         checked={selectedValue === 'a'}
                         onChange={handleChange}
@@ -44,6 +45,7 @@ export default () => {
                         name="radio-buttons"
                         inputProps={{ 'aria-label': 'A' }}
                     />
+                    Pessoa jurídica
                     <Radio
                         checked={selectedValue === 'b'}
                         onChange={handleChange}
