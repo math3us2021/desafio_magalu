@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Cep, Endereco, Address } from "./styles";
@@ -19,6 +19,7 @@ const schema = Yup.object().shape({
 });
 
 export default () => {
+    const [OpenCep, setOpenCep] = useState(false);
 
     function onSubmit(values, actions) {
         console.log(values);
@@ -40,14 +41,43 @@ export default () => {
                 setFieldValue('cidade', res.data.localidade);
                 setFieldValue('uf', res.data.uf);
             })
-            return(
-                <div>
-                    
-                </div>
-            )
     }
 
+    function handleCep(e) {
+        
 
+        return (
+            <Address>
+                
+                    <div >
+                        <label  name="logradouro">Logradouro</label>
+                        <Field name="logradouro" type="text" className="form-control" />                 
+                    </div>
+                    <div >
+                        <label  name="numero">Numero</label>
+                        <Field name="numero" type="text" className="form-control" />
+                        <ErrorMessage name="numero" component="span" className="error" />
+                    </div>
+                    <div >
+                        <label name="bairro">Bairro</label>
+                        <Field name="bairro" type="text" className="form-control" />                   
+                    </div>
+                    <div className="form-control-group">
+                        <label name="cidade">Cidade</label>
+                        <Field name="cidade" type="text" className="form-control" />                      
+                    </div>
+                    <div className="form-control-group">
+                        <label name="uf">Estado</label>
+                        <Field name="uf" type="text" className="form-control" />                  
+                    </div>
+                    <div className="form-control-group">
+                        <label name="cidade">Cidade</label>
+                        <Field name="cidade" type="text" className="form-control" />
+                    </div>
+               
+            </Address>
+        )
+    }
 
 
     return (
@@ -71,49 +101,18 @@ export default () => {
                         <Form>
                             <div className="form-control-group">
                                 <label name="cep">CEP</label>
-                                <Field name="cep" type="text" maxLength="9" className="form-control" onBlur={(e) => onBlurCep(e, setFieldValue)} />
+                                <Field name="cep" type="text" maxLength="9" placeholder="00000000" className="form-control" onBlur={(e) => onBlurCep(e, setFieldValue)} />
                                 <ErrorMessage name="cep" className="error" />
+                                <Button variant="contained" onClick={() => setOpenCep(true)} >OK</Button>
                             </div>
-
-
-                            <div className="form-control-group">
-                                <label name="logradouro">Logradouro</label>
-                                <Field name="logradouro" type="text" className="form-control" />
-                                <ErrorMessage className="error" name="logradouro" />
+                            <div>
+                            {OpenCep && handleCep()}
                             </div>
-                            <div className="form-control-group">
-                                <label name="numero">Numero</label>
-                                <Field name="numero" type="text" className="form-control" />
-                                <ErrorMessage name="numero" component="span" className="error" />
-                            </div>
-                            <div className="form-control-group">
-                                <label name="bairro">Bairro</label>
-                                <Field name="bairro" type="text" className="form-control" />
-                                <ErrorMessage name="bairro" component="span" className="error" />
-                            </div>
-
-                            <div className="form-control-group">
-                                <label name="cidade">Cidade</label>
-                                <Field name="cidade" type="text" className="form-control" />
-                                <ErrorMessage name="cidade" component="span" className="error" />
-                            </div>
-                            <div className="form-control-group">
-                                <label name="uf">Estado</label>
-                                <Field name="uf" type="text" className="form-control" />
-                                <ErrorMessage name="uf" component="span" className="error" />
-                            </div>
-                            <div className="form-control-group">
-                                <label name="cidade">Cidade</label>
-                                <Field name="cidade" type="text" className="form-control" />
-                                <ErrorMessage name="cidade" component="span" className="error" />
-                            </div>
-
-
                         </Form>
                     )}
                 </Formik>
 
-               
+
 
             </div>
 
