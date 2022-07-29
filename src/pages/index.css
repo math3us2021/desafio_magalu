@@ -1,5 +1,6 @@
 .errorInput {
   border: 2px solid red !important;
+  border-radius: 5px !important;
 } 
 .errorInp {
   color: rgb(196, 14, 14) !important;
@@ -7,12 +8,6 @@
   font-size: 20px;
   font-weight: 600;
 } 
-
-/* .formEmail{
-  display: flex;
-flex-direction: column;
-background-color: rgba(241, 241, 241, 0.885);
-} */
 
 .formInput{
   display: inline;
@@ -31,3 +26,13 @@ button:disabled {
   color: aliceblue;
   border: 0px;
 }
+
+.next{
+  display: inline;
+  flex-direction: column
+  }
+  .next button {
+    margin-left: 60px;
+    color: #00b300;
+    font-weight: 600;
+  }

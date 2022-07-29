@@ -1,7 +1,6 @@
 import React from "react";
+import "./components.css";
 import { Dados, Nome, DataNasc, Senha, Cpf } from "./styles";
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import Input from '@mui/material/Input';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -28,7 +27,6 @@ export default () => {
                     nome: "",
                     dataNascimento: "",
                     senha: "",
-
                 }}
             >
                 {({}) => (
@@ -37,22 +35,22 @@ export default () => {
                     <Cpf className="form-group row">
                         <label id="cpf" className="col-sm-2 col-form-label">CPF</label>
                         <Field type="text" className="form-control" id="cpf" name="cpf" placeholder="CPF" ></Field>
-                        <ErrorMessage name="cpf" component="span" className="alert alert-danger" />
+                        <ErrorMessage name="cpf" component="div" className="errorInpu" />
                     </Cpf>
                     <Nome className="form-group row">
                         <label  className="col-sm-2 col-form-label" id="nome">Nome completo</label>
                         <Field type="text" className="form-control" name="nome" id="nome" placeholder="Nome completo"></Field>
-                        <ErrorMessage name="nome" component="span" className="alert alert-danger" />
+                        <ErrorMessage name="nome" component="div" className="errorInpu" />
                     </Nome>
                     <DataNasc>
                         <label id="dataNascimento" >Data de Nascimento</label>
                         <Field id="dataNascimento"  name="dataNascimento" type="data" className="form-control" placeholder="DD/MM/AAAA"></Field>
-                        <ErrorMessage name="dataNascimento" component="span" className="alert alert-danger" />
+                        <ErrorMessage name="dataNascimento" component="div" className="errorInpu" />
                     </DataNasc>
                     <Senha>
                         <label id="senha" className="FormGroup-label " >Senha (Minimo de seis digitos)</label>
                         <Field id="senha" name="senha" className="form-control" placeholder="Senha" ></Field>
-                        <ErrorMessage name="senha" component="span" className="alert alert-danger" />
+                        <ErrorMessage name="senha" component="span" className="errorInpu" />
                     </Senha>
                 </Form>)}
             </Formik>

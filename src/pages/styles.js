@@ -15,21 +15,15 @@ h1{
 export const RedesSociais = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    
+    align-items: center;  
 `;
 
 export const Google = styled(Button)`
     background-color: #eaeae1 !important;
-
-
     color: #333 !important;
 `;
 
 export const Email = styled.div`
-    // display: flex;
-    // justify-content: center;
     margin-left: 535px;
     
     div{
@@ -42,7 +36,9 @@ export const Email = styled.div`
         align-self: center;
         justify-self: center;
     }
-
+    input{
+        width: 350px;
+    }
 `;
 
 
@@ -58,13 +54,9 @@ export const Conta = styled.div`
     justify-content: center;
 
     div{
-  
-        margin : 10px;
-        text-align: center;
+     margin : 10px;
+     text-align: center;
     }
-label{
- 
-}
 
 `;
 

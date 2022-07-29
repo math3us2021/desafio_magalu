@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
+
 export const Nav = styled.div`
 background-color: #0086ff;
 color: white;
-
-
-
-
-
 ul{
     display: flex;
     justify-content: space-around;
@@ -18,10 +14,8 @@ ul{
 li{
     list-style-type: none;
 }
-
-
-
 `;
+
 export const Footer = styled.div`
 background-color: #0086ff;
 color: white;
@@ -43,11 +37,15 @@ li{
     list-style-type: none;
 }
 `;
+
+export const FooterLogin = styled(Footer)`
+position: fixed;
+
+
+`;
 export const Linha = styled.div`
 heigth: 50px
 width: 100%;
-
-
 div{
     width: 100%;
     height: 7px;
@@ -56,7 +54,6 @@ div{
     background: -webkit-linear-gradient(left, #D9E52F 0%, #EA5D1D 50%, #2466EA 100%);
     background: linear-gradient(to right, #D9E52F 0%, #EA5D1D 50%, #2466EA 100%);
 }
-
 `;
 
 export const TipoConta = styled.div`
@@ -78,6 +75,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+margin-left: 180px;
 
 
 div{
@@ -109,11 +107,11 @@ margin-right: 5.5%;
 label{
     text-align: center;
     justify-content: center;
-    
+    margin: 3px;
 }
 
 input{
-    width: 350px;
+    width: 300px;
     margin: 10px;
 }
 `;
@@ -141,6 +139,19 @@ input{
 }
 `;
 
+export const Address = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        flex-direction: row;
+    }
+    label{
+        margin: 5px;
+        margin-right: 20px;
+    }
+`;
 export const Cep = styled.div`
     display: flex;
     flex-direction: row;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes, } from "react-router-dom";
-import Home from "./pages/home.js";
-import Login from "./pages/login.js";
-import Validation from "./pages/validation.js";
+import Home from "./pages/home.jsx";
+import Login from "./pages/login.jsx";
+import Validation from "./pages/validation.jsx";
 
 
 export default function Routers() {

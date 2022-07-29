@@ -2,9 +2,6 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import EnderecoNovo from "../components/EnderecoNovo";
-import { useSelector } from "react-redux";
-// import { selectUser } from "../store/userSlice";
-
 
 
     const schema = Yup.object().shape({
@@ -41,7 +38,7 @@ export default function Validation() {
                             <label id="FirstName">Primeiro Nome</label>
                             <Field id="FirstName" name="firstName" type="text" />
                             <ErrorMessage name="FirstName" />
-                            {/* {errors.firstName && touched.firstName && <span className="errorInput">{errors.firstName}</span>}  */}
+                        
                         </div>
                         <div>
                          <label id="age">Idade</label>
