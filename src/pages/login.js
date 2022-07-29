@@ -4,8 +4,11 @@ import Button from '@mui/material/Button';
 import Navbar from "../components/Navbar";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-
 import { Title, Conta, FormEmail } from "./styles";
+import { selectUser } from "../store/userSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { changeUser, logout } from "../store/userSlice";
+import { useNavigate } from "react-router-dom";
 
 
 const schema = Yup.object().shape({
@@ -13,9 +16,103 @@ const schema = Yup.object().shape({
 });
 
 
-export default function Login(props) {
+export default function Login() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    // function validate(e) {
+
+    function onSubmit(values, actions) {
+        dispatch(changeUser(values.email));
+        navigate("/");
+    }
+
+
+    function onLogout() {
+        dispatch(logout());
+    }
+
+    function nextPage() {
+        navigate("/");
+    }
+
+    const email = useSelector(selectUser);
+    console.log("**** Redux*** ", email);
+
+    return (
+        <div>
+            <Navbar />
+            <Title>
+                <h1>Identificação</h1>
+            </Title>
+
+            <Button onClick={onLogout}>Zerar State</Button>
+
+            <Button onClick={nextPage}>Home</Button>
+
+
+            <Conta>
+                <div>
+                    <div >
+                        <label><strong><h4>Quero criar uma conta</h4></strong></label>
+                        <div>
+                            <Formik
+                                onSubmit={onSubmit}
+                                validationSchema={schema}
+                                initialValues={{
+                                    email: "",
+                                }}
+                            >
+                                {({ isValid, dirty }) => (
+                                    <Form >
+
+                                        <FormEmail>
+                                            <label id="email">Email *</label>
+                                            <Field placeholder="Email" name="email" id="email" ></Field>
+                                            <ErrorMessage name="email" component="div"  className="errorInp" />
+                                        </FormEmail>
+
+                                        <button className="buttonEnvio"
+                                        // <button  style={{ width: "300px", marginLeft: "60px", backgroundColor: "#2e7d32",color: "#FFF"}} 
+                                            disabled={!isValid || !dirty}
+                                            variant="contained"
+                                            size="large" id="button"
+                                        >ENTRAR</button>
+
+                                    </Form>
+                                )}
+
+                            </Formik>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label><strong><h4>Já sou cliente</h4></strong></label>
+                        <FormEmail>
+                            <div>
+                                <label id="email2" >Email</label>
+                                <input placeholder="Email" id="email2" name="email2" ></input>
+                            </div>
+                            <div>
+                                <label>Senha</label>
+                                <input placeholder="Senha" id="password"></input>
+                            </div>
+                            <Button color="success" variant="contained" size="large" id="button">Entrar</Button>
+
+                        </FormEmail>
+
+                    </div>
+                </div>
+            </Conta>
+           
+        </div>
+    )
+}
+
+
+
+
+ // function validate(e) {
     //     e.preventDefault();
 
     //     const email = document.querySelector('#email');
@@ -86,76 +183,3 @@ export default function Login(props) {
 
 
     // }
-
-
-    function onSubmit(values, props) {
-        console.log(values);
-
-    }
-
-    return (
-        <div>
-            <Navbar />
-
-            <Title>
-                <h1>Identificação</h1>
-            </Title>
-
-            <Conta>
-                <div>
-                    <div >
-                        <label><strong><h4>Quero criar uma conta</h4></strong></label>
-                        <div>
-                            <Formik
-                                onSubmit={onSubmit}
-                                validationSchema={schema}
-                                initialValues={{
-                                    email: "",
-                                }}
-                            >
-                                {({ isValid, dirty }) => (
-                                    <Form >
-
-                                                <FormEmail>
-                                                    <label  id="email">Email *</label>
-                                                    <Field  placeholder="Email" name="email" id="email" ></Field>
-                                                    <ErrorMessage name="email" component="div" className="alert alert-danger" />
-                                                </FormEmail>
-                                           
-
-                                            
-
-                                                <button style={{width: "300px", marginLeft: "60px" }} color="success"
-                                                    disabled={!isValid || !dirty}
-                                                    variant="contained"
-                                                    size="large" id="button">Entrar</button>
-
-                                           
-                                        
-                                    </Form>
-                                )}
-                            </Formik>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label><strong><h4>Já sou cliente</h4></strong></label>
-                        <FormEmail>
-                            <div>
-                                <label id="email2" >Email</label>
-                                <input  placeholder="Email" id="email2" name="email2" ></input>
-                            </div>
-                            <div>
-                                <label>Senha</label>
-                                <input  placeholder="Senha" id="password"></input>
-                            </div>
-                            <Button color="success" variant="contained" size="large" id="button">Entrar</Button>
-
-                        </FormEmail>
-                    </div>
-                </div>
-            </Conta>
-        </div>
-    )
-}

@@ -2,7 +2,8 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import EnderecoNovo from "../components/EnderecoNovo";
-import { useSlotProps } from "@mui/base";
+import { useSelector } from "react-redux";
+// import { selectUser } from "../store/userSlice";
 
 
 
@@ -16,8 +17,8 @@ import { useSlotProps } from "@mui/base";
 
 export default function Validation() {
 
-    function onSubmit(values,actions) {
 
+    function onSubmit(values,actions) {
         console.log(values);
     }
     
@@ -25,7 +26,6 @@ export default function Validation() {
         <div>
             <h1>Validation</h1>
             <Formik 
-            
             onSubmit={onSubmit}
             validationSchema={schema}
             initialValues={{  // iniciando os valores, estão zerados
