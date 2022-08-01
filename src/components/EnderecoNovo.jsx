@@ -101,7 +101,7 @@ export default () => {
                         <Form>
                             <div className="form-control-group">
                                 <label name="cep">CEP</label>
-                                <Field name="cep" type="text" maxLength="9" placeholder="00000000" className="form-control" onBlur={(e) => onBlurCep(e, setFieldValue)} />
+                                <Field name="cep" type="text" maxLength="8" placeholder="00000000" className="form-control" onBlur={(e) => onBlurCep(e, setFieldValue)} />
                                 <ErrorMessage name="cep" className="error" />
                                 <Button variant="contained" onClick={() => setOpenCep(true)} >OK</Button>
                             </div>

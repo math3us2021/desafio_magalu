@@ -25,7 +25,7 @@ export default function Login() {
 
     function onSubmit(values, actions) {
         dispatch(changeUser(values.email));
-        navigate("/");
+        navigate("/home");
     }
 
     function onLogout() {
@@ -33,7 +33,7 @@ export default function Login() {
     }
 
     function nextPage() {
-        navigate("/");
+        navigate("/home");
     }
 
        function validateClient(e) {
